@@ -7,11 +7,41 @@
         <result xml:space="preserve">
 
 
+Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  Maybe I should go check that mailbox
 Love is in the Air
 An Interactive Fiction by Rachel Lee
-Release 1 / Serial number 170210 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170211 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Bathroom
+You can see Bathroom door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1738"></child>
+        </children>
+    </item>
+    <item nodeId="node-1738">
+        <command xml:space="preserve">h</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1739"></child>
+        </children>
+    </item>
+    <item nodeId="node-1739">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1740"></child>
+        </children>
+    </item>
+    <item nodeId="node-1740">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Bathroom door)
+It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

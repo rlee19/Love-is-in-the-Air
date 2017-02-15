@@ -11,23 +11,51 @@ Singing songs about her, dreaming of her, thinking about how you've finally foun
 
 Love is in the Air
 An Interactive Fiction by Rachel Lee
-Release 1 / Serial number 170214 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170215 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Bathroom
-Squeaky clean, just how I like it.
+Squeaky clean, just how I like it.  The west hallway is just out the door to the north.
 
-You can see Bathroom door and Toilet here.
+You can see Bathroom door, sink, bathtub and toilet here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1738"></child>
+        <children><child nodeId="node-1744"></child>
+            <child nodeId="node-1738"></child>
+            <child nodeId="node-1748"></child>
             <child nodeId="node-1741"></child>
+            <child nodeId="node-1751"></child>
             <child nodeId="node-1743"></child>
         </children>
     </item>
     <item nodeId="node-1743">
         <command xml:space="preserve">x bathroom</command>
-        <result xml:space="preserve">Are you kidding me....I've locked myself in..in my own bathroom. I know I left the key in here somewhere, I just need to find it
+        <result xml:space="preserve">Are you kidding me....I've locked myself in..in my own bathroom. I know I left the key in here somewhere, I just need to find it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1747"></child>
+        </children>
+    </item>
+    <item nodeId="node-1747">
+        <command xml:space="preserve">x toilet</command>
+        <result xml:space="preserve">I should really fix this toilet, it's been clogged for a while.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1751">
+        <command xml:space="preserve">take bathrub</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1752"></child>
+        </children>
+    </item>
+    <item nodeId="node-1752">
+        <command xml:space="preserve">take bathtub</command>
+        <result xml:space="preserve">That's fixed in place.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -44,6 +72,23 @@ You can see Bathroom door and Toilet here.
     <item nodeId="node-1742">
         <command xml:space="preserve">x door</command>
         <result xml:space="preserve">Are you kidding me....I've locked myself in..in my own bathroom. I know I left the key in here somewhere, I just need to find it
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1748">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Bathroom door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1750"></child>
+        </children>
+    </item>
+    <item nodeId="node-1750">
+        <command xml:space="preserve">x door</command>
+        <result xml:space="preserve">Are you kidding me....I've locked myself in..in my own bathroom. I know I left the key in here somewhere, I just need to find it.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -70,6 +115,13 @@ You can see Bathroom door and Toilet here.
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Bathroom door)
 It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1744">
+        <command xml:space="preserve">flush toilet</command>
+        <result xml:space="preserve">CLUNK! Lots of paper bubble up to the surface including a small golden key.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

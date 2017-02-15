@@ -7,18 +7,46 @@
         <result xml:space="preserve">
 
 
-Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  Maybe I should go check that mailbox
+Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  I haven't checked my mailbox yet.
+
 Love is in the Air
 An Interactive Fiction by Rachel Lee
-Release 1 / Serial number 170211 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170214 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Bathroom
-You can see Bathroom door here.
+Squeaky clean, just how I like it.
+
+You can see Bathroom door and Toilet here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1738"></child>
+            <child nodeId="node-1741"></child>
+            <child nodeId="node-1743"></child>
         </children>
+    </item>
+    <item nodeId="node-1743">
+        <command xml:space="preserve">x bathroom</command>
+        <result xml:space="preserve">Are you kidding me....I've locked myself in..in my own bathroom. I know I left the key in here somewhere, I just need to find it
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1741">
+        <command xml:space="preserve">open door</command>
+        <result xml:space="preserve">It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1742"></child>
+        </children>
+    </item>
+    <item nodeId="node-1742">
+        <command xml:space="preserve">x door</command>
+        <result xml:space="preserve">Are you kidding me....I've locked myself in..in my own bathroom. I know I left the key in here somewhere, I just need to find it
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1738">
         <command xml:space="preserve">h</command>

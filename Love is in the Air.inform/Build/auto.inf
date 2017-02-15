@@ -43,7 +43,7 @@ Global Story = BC_0;
 Constant Headline BC_1;
 Constant Story_Author BC_2;
 Release 1;
-Serial "170211";
+Serial "170214";
 
 Default Story 0;
 Default Headline 0;
@@ -4402,7 +4402,7 @@ Global lightflag = false;
 ! ListWriter.i6t: Memory
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant REQUISITION_STACK_SIZE = 3*18;
+Constant REQUISITION_STACK_SIZE = 3*23;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -10575,8 +10575,11 @@ Constant DirectionObject_10 = in_obj;
 Constant DirectionObject_11 = out_obj;
 Array Map_Storage -->
  I127_bathroom_door 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I125_bathroom
- 0 0 0 I127_bathroom_door 0 0 0 I128_bedroom 0 0 0 0 ! Exits from: I126_hallway
- 0 0 0 0 0 0 I126_hallway 0 0 0 0 0 ! Exits from: I128_bedroom
+ 0 0 0 I127_bathroom_door 0 0 I130_east_hallway I134_bedroom 0 0 0 0 ! Exits from: I128_west_hallway
+ 0 0 0 0 0 0 I131_living_room I128_west_hallway 0 0 0 0 ! Exits from: I130_east_hallway
+ I132_front_door 0 0 0 0 0 0 I130_east_hallway 0 0 0 0 ! Exits from: I131_living_room
+ 0 0 0 I132_front_door 0 0 0 0 0 0 0 0 ! Exits from: I133_lawn
+ 0 0 0 0 0 0 I128_west_hallway 0 0 0 0 0 ! Exits from: I134_bedroom
 ;
 
 Class VPH_Class;
@@ -11028,7 +11031,7 @@ Object selfobj ""
     with cap_short_name BC_143
     has mark_as_thing
     with IK2_Count 0
-    with IK2_Link I129_bathtub
+    with IK2_Link I126_toilet
     with IK8_Count 0
     with IK8_Link nothing
     with KD_Count 8
@@ -11043,60 +11046,62 @@ Object selfobj ""
 Object I125_bathroom ""
     class K1_room
     with short_name BC_148
+    with description BC_149
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 0
-    with IK1_Link I126_hallway
+    with IK1_Link I128_west_hallway
     with KD_Count 1
     with name 'bathroom' 'rooms//p' 
-    with description BC_149
     with list_together BC_150
     with plural BC_151
     with article BC_152
 ;
 
-Object -> I129_bathtub ""
+Object -> I126_toilet ""
     class K2_thing
     with short_name BC_153
+    with description BC_154
     has proper
     has static
-    has scenery
     with vector 0
     has mark_as_thing
-    with IK2_Count 2
-    with IK2_Link I127_bathroom_door
+    with IK2_Count 1
+    with IK2_Link I129_gold_key
     with KD_Count 2
-    with name 'bathtub' 'things//p' 
+    with name 'toilet' 'things//p' 
     with action_bitmap 0 0 0 0 0 
-    with description BC_154
     with initial BC_155
     with list_together BC_156
     with plural BC_157
     with article BC_158
 ;
 
-Object I126_hallway ""
-    class K1_room
+Object -> I129_gold_key ""
+    class K2_thing
     with short_name BC_159
-    has proper
+    has concealed
     with vector 0
-    with room_index -1
-    has mark_as_room
-    with IK1_Count 1
-    with IK1_Link I128_bedroom
-    with KD_Count 1
-    with name 'hallway' 'rooms//p' 
+    has mark_as_thing
+    with IK2_Count 3
+    with IK2_Link I127_bathroom_door
+    with KD_Count 2
+    with name 'gold' 'key' 'things//p' 
+    with action_bitmap 0 0 0 0 0 
     with description BC_160
-    with list_together BC_161
-    with plural BC_162
-    with article BC_163
+    with initial BC_161
+    with list_together BC_162
+    with plural BC_163
+    with article BC_164
 ;
 
 Object I127_bathroom_door ""
     class K4_door
-    with short_name BC_164
+    with short_name BC_165
+    with description BC_166
+    with with_key I129_gold_key
     has proper
     has ~open
     has openable
@@ -11108,44 +11113,143 @@ Object I127_bathroom_door ""
         ;
         loc = location;
         if (loc == thedark) loc = real_location;
-        if (loc == I126_hallway) return I54_south; return I51_north;],
+        if (loc == I125_bathroom) return I51_north; return I54_south;],
     with door_to [ 
         loc ! room of actor
         ;
         loc = location;
         if (loc == thedark) loc = real_location;
-        if (loc == I126_hallway) return I125_bathroom; return I126_hallway;],
-    with found_in I126_hallway I125_bathroom
+        if (loc == I125_bathroom) return I128_west_hallway; return I125_bathroom;],
+    with found_in I125_bathroom I128_west_hallway
     has mark_as_thing
-    with IK2_Count 1
-    with IK2_Link nothing
+    with IK2_Count 2
+    with IK2_Link I132_front_door
     with IK4_Count 0
-    with IK4_Link nothing
+    with IK4_Link I132_front_door
     with KD_Count 4
     with name 'bathroom' 'door' 'doors//p' 
     with action_bitmap 0 0 0 0 0 
-    with description BC_165
-    with initial BC_166
-    with list_together BC_167
-    with plural BC_168
-    with article BC_169
+    with initial BC_167
+    with list_together BC_168
+    with plural BC_169
+    with article BC_170
 ;
 
-Object I128_bedroom ""
+Object I128_west_hallway ""
     class K1_room
-    with short_name BC_170
+    with short_name BC_171
+    with description BC_172
+    has proper
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 1
+    with IK1_Link I130_east_hallway
+    with KD_Count 1
+    with name 'west' 'hallway' 'rooms//p' 
+    with list_together BC_173
+    with plural BC_174
+    with article BC_175
+;
+
+Object I130_east_hallway ""
+    class K1_room
+    with short_name BC_176
+    with description BC_177
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 2
+    with IK1_Link I131_living_room
+    with KD_Count 1
+    with name 'east' 'hallway' 'rooms//p' 
+    with list_together BC_178
+    with plural BC_179
+    with article BC_180
+;
+
+Object I131_living_room ""
+    class K1_room
+    with short_name BC_181
+    with description BC_182
+    has proper
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 3
+    with IK1_Link I133_lawn
+    with KD_Count 1
+    with name 'living' 'room' 'rooms//p' 
+    with list_together BC_183
+    with plural BC_184
+    with article BC_185
+;
+
+Object I132_front_door ""
+    class K4_door
+    with short_name BC_186
+    with description BC_187
+    with vector 0
+    with door_dir [ 
+        loc ! room of actor
+        ;
+        loc = location;
+        if (loc == thedark) loc = real_location;
+        if (loc == I131_living_room) return I51_north; return I54_south;],
+    with door_to [ 
+        loc ! room of actor
+        ;
+        loc = location;
+        if (loc == thedark) loc = real_location;
+        if (loc == I131_living_room) return I133_lawn; return I131_living_room;],
+    with found_in I131_living_room I133_lawn
+    has mark_as_thing
+    with IK2_Count 4
+    with IK2_Link nothing
+    with IK4_Count 1
+    with IK4_Link nothing
+    with KD_Count 4
+    with name 'front' 'door' 'doors//p' 
+    with action_bitmap 0 0 0 0 0 
+    with initial BC_188
+    with list_together BC_189
+    with plural BC_190
+    with article BC_191
+;
+
+Object I133_lawn ""
+    class K1_room
+    with short_name BC_192
+    with description BC_193
+    has proper
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 4
+    with IK1_Link I134_bedroom
+    with KD_Count 1
+    with name 'lawn' 'rooms//p' 
+    with list_together BC_194
+    with plural BC_195
+    with article BC_196
+;
+
+Object I134_bedroom ""
+    class K1_room
+    with short_name BC_197
+    with description BC_198
+    has proper
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 5
     with IK1_Link nothing
     with KD_Count 1
     with name 'bedroom' 'rooms//p' 
-    with description BC_171
-    with list_together BC_172
-    with plural BC_173
-    with article BC_174
+    with list_together BC_199
+    with plural BC_200
+    with article BC_201
 ;
 
 Constant I71_english_language = 1;
@@ -11199,12 +11303,12 @@ Constant I123_masculine_gender = 2;
 Constant I124_feminine_gender = 3;
 Array Global_Vars -->
   (false) ! 7 darkness witnessed
-  (BC_175) ! 25 command prompt
+  (BC_202) ! 25 command prompt
   (I71_english_language) ! 29 language of play
-  (BC_176) ! 32 story author
-  (BC_177) ! 33 story headline
-  (BC_178) ! 34 story genre
-  (BC_179) ! 35 story description
+  (BC_203) ! 32 story author
+  (BC_204) ! 33 story headline
+  (BC_205) ! 34 story genre
+  (BC_206) ! 35 story description
   (1) ! 36 release number
   (0) ! 37 story creation year
   (0) ! 45 locale paragraph count
@@ -11219,14 +11323,14 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0664 0 (BC_180) (BC_181) (BC_182) (BC_183) (BC_184) ;
+Array tab_0_0 table $0664 0 (BC_207) (BC_208) (BC_209) (BC_210) (BC_211) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
 Array tab_0_2 table $2066 2 (Consult_Grammar_93) (Consult_Grammar_94) (Consult_Grammar_95) (Consult_Grammar_96) (Consult_Grammar_97) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4 ( TABLE_NOVALUE) ( TABLE_NOVALUE) (V27_amusing_a_victorious_pla) ( TABLE_NOVALUE) ( TABLE_NOVALUE) ;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -11236,7 +11340,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $0f  ! Column 1
+  $3f  ! Column 1
   
   ! End of table
   NULL NULL;
@@ -11979,9 +12083,9 @@ Array ActionHappened --> 0 0 0 0 0;
 ! When play begins:
 [ R_800 ;
     if (debug_rules) DB_Rule(R_800, 800);
-    ! [2: say ~Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  Maybe I should go check that mailbox~]
-    say__p=1;! [3: ~Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  Maybe I should go check that mailbox~]
-    ParaContent(); print "Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  Maybe I should go check that mailbox"; .L_Say1; .L_SayX1;rfalse;
+    ! [2: say ~Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  I haven't checked my mailbox yet.~]
+    say__p=1;! [3: ~Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  I haven't checked my mailbox yet.~]
+    ParaContent(); print "Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  I haven't checked my mailbox yet."; new_line; .L_Say1; .L_SayX1;rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
 
@@ -27858,8 +27962,8 @@ Constant SLOW_ROUTE_FINDING;
 ! Relations.i6t: Cache Control
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant NUM_DOORS = 1;
-Constant NUM_ROOMS = 3;
+Constant NUM_DOORS = 2;
+Constant NUM_ROOMS = 6;
 
 Array DoorRoutingViable -> NUM_DOORS+1;
 
@@ -28061,7 +28165,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ! Relations.i6t: Relation Route-Finding
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant MAX_ROUTE_LENGTH = 18 + 32;
+Constant MAX_ROUTE_LENGTH = 23 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -48870,21 +48974,34 @@ Verb 'notify'
 
 
 
-Constant TX_PS_39 = ">";
+Constant TX_PS_53 = ">";
 Constant TX_PS_3 = "An Interactive Fiction";
+Constant TX_PS_40 = "Are you kidding me....I've locked myself in..in my own bathroom. I know I left the key in here somewhere, I just need to find it.";
 Constant TX_PS_32 = "As good-looking as ever.";
-Constant TX_PS_37 = "Bathroom door";
+Constant TX_PS_39 = "Bathroom door";
 Constant TX_PS_34 = "Bathroom";
-Constant TX_PS_35 = "Bathtub";
-Constant TX_PS_38 = "Bedroom";
-Constant TX_PS_40 = "Fiction";
-Constant TX_PS_36 = "Hallway";
+Constant TX_PS_51 = "Bedroom";
+Constant TX_PS_43 = "East Hallway";
+Constant TX_PS_54 = "Fiction";
+Constant TX_PS_47 = "Front Door";
+Constant TX_PS_37 = "I should really fix this toilet, I can see something shiny stuck there which has clogged the toilet but not sure what it is.";
+Constant TX_PS_49 = "Lawn";
+Constant TX_PS_45 = "Living Room";
 Constant TX_PS_2 = "Love is in the Air";
-Constant TX_PS_44 = "QUIT";
-Constant TX_PS_41 = "RESTART";
-Constant TX_PS_42 = "RESTORE a saved game";
+Constant TX_PS_58 = "QUIT";
+Constant TX_PS_55 = "RESTART";
+Constant TX_PS_56 = "RESTORE a saved game";
 Constant TX_PS_4 = "Rachel Lee";
-Constant TX_PS_45 = "UNDO the last command";
+Constant TX_PS_35 = "Squeaky clean, just how I like it.  The west hallway is just out the door to the north.";
+Constant TX_PS_42 = "The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.";
+Constant TX_PS_48 = "The lawn is just beyond this door.";
+Constant TX_PS_46 = "The lawn is to the north through the front door, and the east hallway is just to the west.";
+Constant TX_PS_50 = "The living room is just to the south through the front door.";
+Constant TX_PS_44 = "The living room is to the east, the west hallway is to the west.";
+Constant TX_PS_52 = "The west hallway is just to the east.";
+Constant TX_PS_36 = "Toilet";
+Constant TX_PS_59 = "UNDO the last command";
+Constant TX_PS_41 = "West Hallway";
 Constant TX_PS_33 = "Yourself";
 Constant TX_PS_9 = "animals";
 Constant TX_PS_14 = "backdrops";
@@ -48894,6 +49011,7 @@ Constant TX_PS_17 = "directions";
 Constant TX_PS_10 = "doors";
 Constant TX_PS_28 = "down";
 Constant TX_PS_25 = "east";
+Constant TX_PS_38 = "gold key";
 Constant TX_PS_29 = "inside";
 Constant TX_PS_7 = "men";
 Constant TX_PS_18 = "north";
@@ -48903,7 +49021,7 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_43 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_57 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
 Constant TX_PS_24 = "southwest";
@@ -56217,42 +56335,69 @@ Array BC_145 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_146 --> PACKED_TEXT_STORAGE TX_PS_6;
 Array BC_147 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_148 --> PACKED_TEXT_STORAGE TX_PS_34;
-Array BC_149 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_149 --> PACKED_TEXT_STORAGE TX_PS_35;
 Array BC_150 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_151 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_152 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_153 --> PACKED_TEXT_STORAGE TX_PS_35;
-Array BC_154 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_153 --> PACKED_TEXT_STORAGE TX_PS_36;
+Array BC_154 --> PACKED_TEXT_STORAGE TX_PS_37;
 Array BC_155 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_156 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_157 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_158 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_159 --> PACKED_TEXT_STORAGE TX_PS_36;
+Array BC_159 --> PACKED_TEXT_STORAGE TX_PS_38;
 Array BC_160 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_161 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_162 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_163 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_164 --> PACKED_TEXT_STORAGE TX_PS_37;
-Array BC_165 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_166 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_164 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_165 --> PACKED_TEXT_STORAGE TX_PS_39;
+Array BC_166 --> PACKED_TEXT_STORAGE TX_PS_40;
 Array BC_167 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_168 --> PACKED_TEXT_STORAGE TX_PS_10;
-Array BC_169 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_170 --> PACKED_TEXT_STORAGE TX_PS_38;
-Array BC_171 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_172 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_168 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_169 --> PACKED_TEXT_STORAGE TX_PS_10;
+Array BC_170 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_171 --> PACKED_TEXT_STORAGE TX_PS_41;
+Array BC_172 --> PACKED_TEXT_STORAGE TX_PS_42;
 Array BC_173 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_174 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_175 --> PACKED_TEXT_STORAGE TX_PS_39;
-Array BC_176 --> PACKED_TEXT_STORAGE TX_PS_4;
-Array BC_177 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_178 --> PACKED_TEXT_STORAGE TX_PS_40;
+Array BC_175 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_176 --> PACKED_TEXT_STORAGE TX_PS_43;
+Array BC_177 --> PACKED_TEXT_STORAGE TX_PS_44;
+Array BC_178 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_179 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_180 --> PACKED_TEXT_STORAGE TX_PS_41;
-Array BC_181 --> PACKED_TEXT_STORAGE TX_PS_42;
-Array BC_182 --> PACKED_TEXT_STORAGE TX_PS_43;
-Array BC_183 --> PACKED_TEXT_STORAGE TX_PS_44;
-Array BC_184 --> PACKED_TEXT_STORAGE TX_PS_45;
+Array BC_180 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_181 --> PACKED_TEXT_STORAGE TX_PS_45;
+Array BC_182 --> PACKED_TEXT_STORAGE TX_PS_46;
+Array BC_183 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_184 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_185 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_186 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_187 --> PACKED_TEXT_STORAGE TX_PS_48;
+Array BC_188 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_189 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_190 --> PACKED_TEXT_STORAGE TX_PS_10;
+Array BC_191 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_49;
+Array BC_193 --> PACKED_TEXT_STORAGE TX_PS_50;
+Array BC_194 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_195 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_196 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_197 --> PACKED_TEXT_STORAGE TX_PS_51;
+Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_52;
+Array BC_199 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_200 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_201 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_202 --> PACKED_TEXT_STORAGE TX_PS_53;
+Array BC_203 --> PACKED_TEXT_STORAGE TX_PS_4;
+Array BC_204 --> PACKED_TEXT_STORAGE TX_PS_3;
+Array BC_205 --> PACKED_TEXT_STORAGE TX_PS_54;
+Array BC_206 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_207 --> PACKED_TEXT_STORAGE TX_PS_55;
+Array BC_208 --> PACKED_TEXT_STORAGE TX_PS_56;
+Array BC_209 --> PACKED_TEXT_STORAGE TX_PS_57;
+Array BC_210 --> PACKED_TEXT_STORAGE TX_PS_58;
+Array BC_211 --> PACKED_TEXT_STORAGE TX_PS_59;
 
 
 

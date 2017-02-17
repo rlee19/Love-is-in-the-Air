@@ -28,13 +28,33 @@ Description of the bathroom door is "Are you kidding me....I've locked myself in
 The gold key is a thing.  The gold key unlocks the bathroom door.  It is in Bathroom.  It is undescribed.
 [End of first puzzle]
 
+Bedroom is west of West Hallway. The description is  "I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  The west hallway is just to the east."
+
+Bed is an enterable supporter in Bedroom.  
+
+Bookshelf is scenery in Bedroom.  The description is "A couple of books stacked together, and Victoria's favourite book, The Maze Runner".  
+
+The Maze Runner Book is a thing in Bedroom.  The Maze Runner Book is undescribed.
+
 East Hallway is east of West Hallway.  The description is "The living room is to the east, the west hallway is to the west."
 
 West Hallway is north of Bathroom door. The description is "The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east."
 
 Living Room is east of East Hallway. The description is "The lawn is to the north through the front door, and the east hallway is just to the west."
+
 The Front Door is a door.  The Front Door is south of Lawn and north of Living Room.  The description is "The lawn is just beyond this door."
 
 Lawn is north of The Front Door. The description is "The living room is just to the south through the front door."
 
-Bedroom is west of West Hallway. The description is  "The west hallway is just to the east."
+Closet is north of Bedroom. 
+
+Black tuxedo is a thing in Closet.  Instead of taking Black tuxedo: say "I don't think I should carry this around."
+
+Hidden door is a door.  Hidden door is north of closet. Hidden door is undescribed.  Hidden door is locked and lockable.  Hidden door is closed and openable.  
+
+Underground tunnel is down of hidden door.
+
+West side of underground tunnel is west of Underground tunnel.
+
+Back room of a church is up of West side of underground tunnel.
+

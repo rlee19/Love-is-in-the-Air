@@ -11,7 +11,7 @@ Singing songs about her, dreaming of her, thinking about how you've finally foun
 
 Love is in the Air
 An Interactive Fiction by Rachel Lee
-Release 1 / Serial number 170215 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170216 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Bathroom
 Squeaky clean, just how I like it.  The west hallway is just out the door to the north.
@@ -20,13 +20,140 @@ You can see Bathroom door, sink, bathtub and toilet here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1744"></child>
+        <children><child nodeId="node-1778"></child>
+            <child nodeId="node-1744"></child>
             <child nodeId="node-1738"></child>
             <child nodeId="node-1748"></child>
             <child nodeId="node-1741"></child>
             <child nodeId="node-1751"></child>
+            <child nodeId="node-1766"></child>
             <child nodeId="node-1743"></child>
+            <child nodeId="node-1753"></child>
+            <child nodeId="node-1759"></child>
         </children>
+    </item>
+    <item nodeId="node-1759">
+        <command xml:space="preserve">x toilet</command>
+        <result xml:space="preserve">I should really fix this toilet, it's been clogged for a while.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1760"></child>
+        </children>
+    </item>
+    <item nodeId="node-1760">
+        <command xml:space="preserve">flush toilet</command>
+        <result xml:space="preserve">CLUNK! Lots of old toilet paper start to bubble up to the surface, and right under them is a golden key.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1761"></child>
+        </children>
+    </item>
+    <item nodeId="node-1761">
+        <command xml:space="preserve">take key</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1762"></child>
+        </children>
+    </item>
+    <item nodeId="node-1762">
+        <command xml:space="preserve">unlock door</command>
+        <result xml:space="preserve">(with the gold key)
+You unlock Bathroom door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1763"></child>
+        </children>
+    </item>
+    <item nodeId="node-1763">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Bathroom door)
+
+West Hallway
+The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.
+
+You can see Bathroom door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1764"></child>
+        </children>
+    </item>
+    <item nodeId="node-1764">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bedroom
+The west hallway is just to the east.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1765"></child>
+        </children>
+    </item>
+    <item nodeId="node-1765">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Closet
+You can see Hidden door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1753">
+        <command xml:space="preserve">x bathtub</command>
+        <result xml:space="preserve">Who doesn't love a bubble bath :D 
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1754"></child>
+        </children>
+    </item>
+    <item nodeId="node-1754">
+        <command xml:space="preserve">x bathroom door</command>
+        <result xml:space="preserve">Are you kidding me....I've locked myself in..in my own bathroom. I know I left the key in here somewhere, I just need to find it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1755"></child>
+        </children>
+    </item>
+    <item nodeId="node-1755">
+        <command xml:space="preserve">x sink</command>
+        <result xml:space="preserve">Sleek 63 inch white marble sink.  Nothing special about it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1756"></child>
+        </children>
+    </item>
+    <item nodeId="node-1756">
+        <command xml:space="preserve">x toilet</command>
+        <result xml:space="preserve">I should really fix this toilet, it's been clogged for a while.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1757"></child>
+        </children>
+    </item>
+    <item nodeId="node-1757">
+        <command xml:space="preserve">fix toilet</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1758"></child>
+        </children>
+    </item>
+    <item nodeId="node-1758">
+        <command xml:space="preserve">flush toilet</command>
+        <result xml:space="preserve">CLUNK! Lots of old toilet paper start to bubble up to the surface, and right under them is a golden key.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1743">
         <command xml:space="preserve">x bathroom</command>
@@ -40,6 +167,216 @@ You can see Bathroom door, sink, bathtub and toilet here.
     <item nodeId="node-1747">
         <command xml:space="preserve">x toilet</command>
         <result xml:space="preserve">I should really fix this toilet, it's been clogged for a while.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1766">
+        <command xml:space="preserve">take key</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1767"></child>
+            <child nodeId="node-1775"></child>
+        </children>
+    </item>
+    <item nodeId="node-1775">
+        <command xml:space="preserve">unlock door</command>
+        <result xml:space="preserve">(with the gold key)
+You unlock Bathroom door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1776"></child>
+            <child nodeId="node-1781"></child>
+        </children>
+    </item>
+    <item nodeId="node-1781">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1782"></child>
+        </children>
+    </item>
+    <item nodeId="node-1782">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Bathroom door)
+
+West Hallway
+The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.
+
+You can see Bathroom door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1783"></child>
+        </children>
+    </item>
+    <item nodeId="node-1783">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bedroom
+I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  The west hallway is just to the east.
+
+You can see Bed here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1784"></child>
+        </children>
+    </item>
+    <item nodeId="node-1784">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1785"></child>
+        </children>
+    </item>
+    <item nodeId="node-1785">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Closet
+You can see Hidden door and Black tuxedo here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1786"></child>
+        </children>
+    </item>
+    <item nodeId="node-1786">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Hidden door)
+
+Underground tunnel
+You can see Hidden door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1795"></child>
+        </children>
+    </item>
+    <item nodeId="node-1795">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+West side of underground tunnel
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1796"></child>
+        </children>
+    </item>
+    <item nodeId="node-1796">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Back room of a church
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1776">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Bathroom door)
+
+West Hallway
+The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.
+
+You can see Bathroom door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1777"></child>
+        </children>
+    </item>
+    <item nodeId="node-1777">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bedroom
+I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  The west hallway is just to the east.
+
+You can see Book here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1767">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Bathroom door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1768"></child>
+        </children>
+    </item>
+    <item nodeId="node-1768">
+        <command xml:space="preserve">unlock door</command>
+        <result xml:space="preserve">(with the gold key)
+You unlock Bathroom door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1769"></child>
+        </children>
+    </item>
+    <item nodeId="node-1769">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Bathroom door)
+
+West Hallway
+The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.
+
+You can see Bathroom door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1770"></child>
+        </children>
+    </item>
+    <item nodeId="node-1770">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bathroom
+Squeaky clean, just how I like it.  The west hallway is just out the door to the north.
+
+You can see Bathroom door, sink, bathtub and toilet here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1771"></child>
+        </children>
+    </item>
+    <item nodeId="node-1771">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+West Hallway
+The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.
+
+You can see Bathroom door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1772"></child>
+        </children>
+    </item>
+    <item nodeId="node-1772">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bedroom
+I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  The west hallway is just to the east.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1773"></child>
+        </children>
+    </item>
+    <item nodeId="node-1773">
+        <command xml:space="preserve">x bookshelf</command>
+        <result xml:space="preserve">A couple of books stacked together on the shelf
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -122,6 +459,13 @@ It seems to be locked.
     <item nodeId="node-1744">
         <command xml:space="preserve">flush toilet</command>
         <result xml:space="preserve">CLUNK! Lots of paper bubble up to the surface including a small golden key.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1778">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

@@ -23,20 +23,18 @@ Flushing toilet is an action applying to nothing.
 Understand "flush" or "flush toilet" as flushing toilet.
 After flushing toilet: say "CLUNK! Lots of old toilet paper start to bubble up to the surface, and right under them is a golden key."
 
-bathroom door is a door.  Bathroom door is north of Bathroom and south of West Hallway.  Bathroom door is locked and lockable.  Bathroom door is closed and openable.
+bathroom door is a door.  Bathroom door is north of Bathroom and south of Hallway.  Bathroom door is locked and lockable.  Bathroom door is closed and openable.
 
 Description of the bathroom door is "Are you kidding me....I've locked myself in..in my own bathroom. I know I left the key in here somewhere, I just need to find it."
 
 The gold key is a thing.  The gold key unlocks the bathroom door.  It is in Bathroom.  It is undescribed.
 [End of first puzzle]
 
-Bedroom is west of West Hallway. The description is  "I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  There's a wide window above the doors to my closet on the south wall.  The west hallway is just to the east."
+Bedroom is west of Hallway. The description is  "I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  There's a wide window above the doors to my closet on the south wall.  The west hallway is just to the east."
 
-East Hallway is east of West Hallway.  The description is "The living room is to the east, the west hallway is to the west."
+Hallway is north of Bathroom door. The description is "There's a small window on the north wall.  The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east."
 
-West Hallway is north of Bathroom door. The description is "There's a small window on the north wall.  The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east."
-
-Living Room is east of East Hallway. The description is "A typical living room and a square window on the east wall.  The lawn is to the north through the front door, and the east hallway is just to the west."
+Living Room is east of Hallway. The description is "A typical living room and a square window on the east wall.  The lawn is to the north through the front door, and the east hallway is just to the west."
 
 The Front Door is a door.  The Front Door is south of Lawn and north of Living Room.  The description is "The lawn is just beyond this door."
 
@@ -77,7 +75,7 @@ wide window is scenery in bedroom.
 Instead of searching the wide window:
 	say "I see a some trees, and a white building with a bell on it."
 	
-small window is scenery in west hallway.  
+small window is scenery in hallway.  
 
 Instead of examining the small window:
 	say  "I see a cat, the road, and a patch of grass"
@@ -111,10 +109,21 @@ After wearing black tuxedo:
 Hidden door is a door.  Hidden door is south of closet. Hidden door is undescribed.  Hidden door is locked and lockable.  Hidden door is closed and openable.  The description is "Woah, it's a hidden door.  Nothing really special about it though, looks like just a door with a silver doorknob that has some engravings on it."  
 
 After opening hidden door:
-	say "After opening the hidden door, you see stairs leading down into the darkness."
+	say "After opening the hidden door, you see stairs leading down into the darkness.  "
+	
+[End of Third Puzzle]
 
-Underground tunnel is down of closet.
+[Fourth Puzzle]
 
+Chewy is a male animal.  Chewy is in Underground tunnel.  Chewy is undescribed.  The description is "Just by the texture of the fur, and the bark, it's definitely Victoria's dog, Chewy"
+
+Underground tunnel is down of closet.  "It is pitch dark, and you can't see a thing.  But you can hear something..."
+
+Instead of listening to Underground tunnel:
+	say "WOOF WOOF! That sounds a lot like Victoria's dog, Chewy!"
+	
+tunnel1 is a dark room.  tunnel1 is north of underground tunnel.
+	
 West side of underground tunnel is west of Underground tunnel.
 
 Back room of a church is up of West side of underground tunnel.

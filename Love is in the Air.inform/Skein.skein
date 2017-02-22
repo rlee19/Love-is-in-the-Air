@@ -11,7 +11,7 @@ Singing songs about her, dreaming of her, thinking about how you've finally foun
 
 Love is in the Air
 An Interactive Fiction by Rachel Lee
-Release 1 / Serial number 170221 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170222 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Bathroom
 Squeaky clean, just how I like it.  The west hallway is just out the door to the north.
@@ -413,7 +413,7 @@ Back room of a church
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening bathroom door)
 
-West Hallway
+Hallway
 There's a small window on the north wall.  The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.
 
 You can see bathroom door here.
@@ -662,7 +662,57 @@ I have stacks of clothes in here, nothing really I want to get into.  My bedroom
     </item>
     <item nodeId="node-1288">
         <command xml:space="preserve">open hidden door</command>
-        <result xml:space="preserve">After opening the hidden door, you see stairs leading down into the darkness
+        <result xml:space="preserve">After opening the hidden door, you see stairs leading down into the darkness.  
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1315"></child>
+        </children>
+    </item>
+    <item nodeId="node-1315">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+Underground tunnel
+It is pitch dark, and you can't see a thing.  But you can hear something...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1640"></child>
+        </children>
+    </item>
+    <item nodeId="node-1640">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Underground tunnel
+It is pitch dark, and you can't see a thing.  But you can hear something...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1641"></child>
+        </children>
+    </item>
+    <item nodeId="node-1641">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Underground tunnel
+It is pitch dark, and you can't see a thing.  But you can hear something...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1642"></child>
+        </children>
+    </item>
+    <item nodeId="node-1642">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Underground tunnel
+It is pitch dark, and you can't see a thing.  But you can hear something...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1643"></child>
+        </children>
+    </item>
+    <item nodeId="node-1643">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">WOOF WOOF! That sounds a lot like Victoria's dog, Chewy!
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>

@@ -30,13 +30,13 @@ Description of the bathroom door is "Are you kidding me....I've locked myself in
 The gold key is a thing.  The gold key unlocks the bathroom door.  It is in Bathroom.  It is undescribed.
 [End of first puzzle]
 
-Bedroom is west of West Hallway. The description is  "I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  There's a wide window above the doors to my closet.  The west hallway is just to the east."
+Bedroom is west of West Hallway. The description is  "I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  There's a wide window above the doors to my closet on the south wall.  The west hallway is just to the east."
 
 East Hallway is east of West Hallway.  The description is "The living room is to the east, the west hallway is to the west."
 
-West Hallway is north of Bathroom door. The description is "The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east."
+West Hallway is north of Bathroom door. The description is "There's a small window on the north wall.  The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east."
 
-Living Room is east of East Hallway. The description is "A typical living room and a wide window on the east wall.  The lawn is to the north through the front door, and the east hallway is just to the west."
+Living Room is east of East Hallway. The description is "A typical living room and a square window on the east wall.  The lawn is to the north through the front door, and the east hallway is just to the west."
 
 The Front Door is a door.  The Front Door is south of Lawn and north of Living Room.  The description is "The lawn is just beyond this door."
 
@@ -85,30 +85,33 @@ Instead of examining the small window:
 [End of second Puzzle.  The player should realize that the sketch matches the view from his bedroom window so that building is where they should go]
 	
 [Third Puzzle]
-Bed is an enterable supporter in Bedroom.  
+bed is an enterable supporter in Bedroom.  bed is undescribed.
 
+Instead of entering bed:
+	say "I just came out of bed not so long ago!"
+	
 Bookshelf is scenery in Bedroom.  The description is "A couple of books stacked together, and Victoria's favourite book, The Maze Runner".  
 
-The Maze Runner Book is a thing in Bedroom.  The Maze Runner Book is undescribed.  The description is "She sent me this book through the mail along with a letter, that's how I knew it was her favourite book.  I still never got a chance to open it though."
+The Maze Runner Book is a thing in Bedroom.  The Maze Runner Book is undescribed.  The description is "She sent me this book through the mail along with a letter, that's how I knew it was her favourite book.  I still never got a chance to open and and ready it though."
 
 Instead of opening The Maze Runner Book:
 	say "It turns out to be a hollowed out book...and there's a mysterious silver key inside.."
 	
-Silver key is a thing inside Bedroom.  The description is "Looks like an antique key with some nice engravings on it.  Wonder what it's for."
+Silver key is a thing inside Bedroom.  Silver key is undescribed.  The description is "Looks like an antique key with some nice engravings on it.  Wonder what it's for."
 
 Silver key unlocks Hidden door.
 
 Closet is south of Bedroom.  The description is "I have stacks of clothes in here, nothing really I want to get into.  My bedroom is to the south."  
 
-Black tuxedo is a thing in Closet.  Black tuxedo is wearable.  Instead of taking Black tuxedo: say "I don't think I should carry this around."
+Black tuxedo is a thing in Closet.  Black tuxedo is wearable.
 
 After wearing black tuxedo:
-	now Hidden door is described.
+	say "After you've slipped on the jacket to the tuxedo, you look back into the closet where the tuxedo used to be, and see a doorknob.  You push the other clothes away and discover a hidden door."
 
-Hidden door is a door.  Hidden door is south of closet. Hidden door is undescribed.  Hidden door is locked and lockable.  Hidden door is closed and openable.  The description is "Woah, it's a hidden door.  Nothing really special about it though, looks like just a door and its doorknob has some special engravings on it."
+Hidden door is a door.  Hidden door is south of closet. Hidden door is undescribed.  Hidden door is locked and lockable.  Hidden door is closed and openable.  The description is "Woah, it's a hidden door.  Nothing really special about it though, looks like just a door with a silver doorknob that has some engravings on it."  
 
-After opening Hidden door:
-	say "It's pitch black, I can't see a thing."
+After opening hidden door:
+	say "After opening the hidden door, you see stairs leading down into the darkness."
 
 Underground tunnel is down of closet.
 

@@ -429,9 +429,36 @@ You can see bathroom door here.
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Bedroom
-I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  The west hallway is just to the east.
+I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  There's a wide window above the doors to my closet.  The west hallway is just to the east.
 
-You can see Book here.
+You can see Bed here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2412"></child>
+        </children>
+    </item>
+    <item nodeId="node-2412">
+        <command xml:space="preserve">x bookshelf</command>
+        <result xml:space="preserve">A couple of books stacked together, and Victoria's favourite book, The Maze Runner
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2413"></child>
+        </children>
+    </item>
+    <item nodeId="node-2413">
+        <command xml:space="preserve">x the maze runner</command>
+        <result xml:space="preserve">She sent me this book through the mail along with a letter, that's how I knew it was her favourite book.  I still never got a chance to open it though.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2414"></child>
+        </children>
+    </item>
+    <item nodeId="node-2414">
+        <command xml:space="preserve">open book</command>
+        <result xml:space="preserve">It isn't something you can open.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -809,18 +836,100 @@ You can see a Front Door here.
     </item>
     <item nodeId="node-2238">
         <command xml:space="preserve">n</command>
-        <result xml:space="preserve">(first opening Bathroom door)
+        <result xml:space="preserve">(first opening bathroom door)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2239"></child>
+            <child nodeId="node-2390"></child>
         </children>
+    </item>
+    <item nodeId="node-2390">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2391"></child>
+        </children>
+    </item>
+    <item nodeId="node-2391">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening bathroom door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2392"></child>
+        </children>
+    </item>
+    <item nodeId="node-2392">
+        <command xml:space="preserve">unlock door</command>
+        <result xml:space="preserve">(with the gold key)
+You unlock bathroom door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2393"></child>
+        </children>
+    </item>
+    <item nodeId="node-2393">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening bathroom door)
+
+West Hallway
+The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.
+
+You can see bathroom door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2394"></child>
+        </children>
+    </item>
+    <item nodeId="node-2394">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bedroom
+I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  There's a wide window above the doors to my closet.  The west hallway is just to the east.
+
+You can see Bed here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2395"></child>
+        </children>
+    </item>
+    <item nodeId="node-2395">
+        <command xml:space="preserve">x book shelf</command>
+        <result xml:space="preserve">I only understood you as far as wanting to examine the Maze Runner Book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2396"></child>
+        </children>
+    </item>
+    <item nodeId="node-2396">
+        <command xml:space="preserve">x bookshelf</command>
+        <result xml:space="preserve">A couple of books stacked together, and Victoria's favourite book, The Maze Runner
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2397"></child>
+        </children>
+    </item>
+    <item nodeId="node-2397">
+        <command xml:space="preserve">x the maze runner</command>
+        <result xml:space="preserve">She sent me this book through the mail along with a letter, that's how I knew it was her favourite book.  I still never got a chance to open it thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-2239">
         <command xml:space="preserve">unlock door</command>
         <result xml:space="preserve">(with the gold key)
-You unlock Bathroom door.
+You unlock bathroom door.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -829,17 +938,47 @@ You unlock Bathroom door.
     </item>
     <item nodeId="node-2240">
         <command xml:space="preserve">n</command>
-        <result xml:space="preserve">(first opening Bathroom door)
+        <result xml:space="preserve">(first opening bathroom door)
 
 West Hallway
 The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.
 
-You can see Bathroom door here.
+You can see bathroom door here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2241"></child>
+            <child nodeId="node-2419"></child>
         </children>
+    </item>
+    <item nodeId="node-2419">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bedroom
+I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  There's a wide window above the doors to my closet.  The west hallway is just to the east.
+
+You can see Bed and Silver key here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2420"></child>
+        </children>
+    </item>
+    <item nodeId="node-2420">
+        <command xml:space="preserve">x bookshelf</command>
+        <result xml:space="preserve">A couple of books stacked together, and Victoria's favourite book, The Maze Runner
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2421"></child>
+        </children>
+    </item>
+    <item nodeId="node-2421">
+        <command xml:space="preserve">x the maze runner</command>
+        <result xml:space="preserve">She sent me this book through the mail along with a letter, that's how I knew it was her favourite book.  I still never got a chance to open it though.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-2241">
         <command xml:space="preserve">s</command>

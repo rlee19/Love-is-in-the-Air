@@ -32,12 +32,6 @@ The gold key is a thing.  The gold key unlocks the bathroom door.  It is in Bath
 
 Bedroom is west of West Hallway. The description is  "I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  There's a wide window above the doors to my closet.  The west hallway is just to the east."
 
-Bed is an enterable supporter in Bedroom.  
-
-Bookshelf is scenery in Bedroom.  The description is "A couple of books stacked together, and Victoria's favourite book, The Maze Runner".  
-
-The Maze Runner Book is a thing in Bedroom.  The Maze Runner Book is undescribed.
-
 East Hallway is east of West Hallway.  The description is "The living room is to the east, the west hallway is to the west."
 
 West Hallway is north of Bathroom door. The description is "The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east."
@@ -64,7 +58,7 @@ After examining folded piece of paper:
 Unfolding paper is an action applying to nothing.
 Understand "open paper" or "unfold" or "unfold paper" as unfolding paper.
 After unfolding paper:
-	say "I see a sketch of a wedding arch, two rings, and a heart between two people.  Is she getting married? There's also a date and time scribbled on the corner.  August 25 2:00PM.  And theres another little sketch of what looks like a view from a window, there are trees, and part of a white building with a bell at the top?"
+	say "I see a sketch of a wedding arch, two rings, and a heart between two people.  Is she getting married? There's also a date and time scribbled on the corner.  August 25 2:00PM.  And theres another little sketch of what looks like a view from a window, there are trees, and part of a white building with a bell at the top with arrows pointing at it."
 
 
 Roses is a thing in Lawn.  The description is "Victoria has always liked roses."
@@ -73,36 +67,48 @@ Instead of taking roses:
 	say "They haven't bloomed yet!"
 
 [learned to code this part from the Inform 7 textbook]	
-square window is scenery in living room.  Understand "look out of [something]" and "look out [something]" as examining.
+square window is scenery in living room.  Understand "look out of [something]" and "look out [something]" as searching.
 
-Instead of examining the square window:
+Instead of searching the square window:
 	say "Looking out the window, I see a couple small houses, and some trees."
 	
 wide window is scenery in bedroom.  
 
-Instead of examining the wide window:
+Instead of searching the wide window:
 	say "I see a some trees, and a white building with a bell on it."
-	
-[End of second Puzzle.  The player should realize that the sketch matches the view from his bedroom window so that building is where they should go]
 	
 small window is scenery in west hallway.  
 
 Instead of examining the small window:
 	say  "I see a cat, the road, and a patch of grass"
-
-
-
 	
-
-
+[End of second Puzzle.  The player should realize that the sketch matches the view from his bedroom window so that building is where they should go]
 	
+[Third Puzzle]
+Bed is an enterable supporter in Bedroom.  
 
+Bookshelf is scenery in Bedroom.  The description is "A couple of books stacked together, and Victoria's favourite book, The Maze Runner".  
 
-Closet is south of Bedroom. 
+The Maze Runner Book is a thing in Bedroom.  The Maze Runner Book is undescribed.  The description is "She sent me this book through the mail along with a letter, that's how I knew it was her favourite book.  I still never got a chance to open it though."
 
-Black tuxedo is a thing in Closet.  Instead of taking Black tuxedo: say "I don't think I should carry this around."
+Instead of opening The Maze Runner Book:
+	say "It turns out to be a hollowed out book...and there's a mysterious silver key inside.."
+	
+Silver key is a thing inside Bedroom.  The description is "Looks like an antique key with some nice engravings on it.  Wonder what it's for."
 
-Hidden door is a door.  Hidden door is south of closet. Hidden door is undescribed.  Hidden door is closed and openable.  
+Silver key unlocks Hidden door.
+
+Closet is south of Bedroom.  The description is "I have stacks of clothes in here, nothing really I want to get into.  My bedroom is to the south."  
+
+Black tuxedo is a thing in Closet.  Black tuxedo is wearable.  Instead of taking Black tuxedo: say "I don't think I should carry this around."
+
+After wearing black tuxedo:
+	now Hidden door is described.
+
+Hidden door is a door.  Hidden door is south of closet. Hidden door is undescribed.  Hidden door is locked and lockable.  Hidden door is closed and openable.  The description is "Woah, it's a hidden door.  Nothing really special about it though, looks like just a door and its doorknob has some special engravings on it."
+
+After opening Hidden door:
+	say "It's pitch black, I can't see a thing."
 
 Underground tunnel is down of closet.
 

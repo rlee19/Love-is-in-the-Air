@@ -122,9 +122,55 @@ Underground tunnel is down of closet.  "It is pitch dark, and you can't see a th
 Instead of listening to Underground tunnel:
 	say "WOOF WOOF! That sounds a lot like Victoria's dog, Chewy!"
 	
-tunnel1 is a dark room.  tunnel1 is north of underground tunnel.
-	
-West side of underground tunnel is west of Underground tunnel.
+tunnel1 is a dark room.  tunnel1 is north of underground tunnel. 
+[The printed name of "tunnel1" is Underground tunnel.]
 
-Back room of a church is up of West side of underground tunnel.
+Instead of listening to tunnel1:
+	say "WOOF! Sounds like it's getting farther!"
+	
+tunnel2 is a dark room.  tunnel2 is south of underground tunnel.
+
+Instead of listening to tunnel2:
+	say "WOOF! Sounds like it's getting closer!"
+	
+tunnel3 is east of tunnel2.  tunnel3 is a dark room.
+
+Instead of listening to tunnel3:
+	say "I can hear his breathing!  I'm getting closer!"
+	
+tunnel4 is north of tunnel3.  tunnel4 is a dark room.
+
+Instead of listening to tunnel4:
+	say "WOOF! It's even louder!"
+
+tunnel5 is east of tunnel4.  tunnel5 is a dark room.
+
+Instead of listening to tunnel5:
+	say "I can hear the bell on Chewy's collar! This is definitely the right direction"
+	
+tunnel6 is east of tunnel5.  tunnel6 is a dark room.
+
+Instead of listening to tunnel6:
+	say "I see a light just to the north, and there's Chewy wagging her tail!"
+	
+Instead of going west in east side of underground tunnel:
+	say "You should go up and follow Chewy"
+	
+East side of underground tunnel is north of tunnel6.  The description is "As you approach Chewy, she runs up the stairs."
+
+[End of fourth puzzle]
+
+Back room of a church is up of East side of underground tunnel.  The description is "A fancy old wooden table with some candles on it."
+
+old wooden table is scenery in Back room of a church.  The description is "You see a couple lit candles on the table, nothing much."
+
+Changing room is a room.  Changing room is east of wooden door.
+
+Wooden door is a door.  Wooden door is closed and openable.  Wooden door is east of back room of a church and west of changing room.
+
+After opening Wooden door:
+	say "As you open the door, there she is.  The love of your life standing right before you, in her gorgeous wedding gown.  All you need to do, is kiss her."
+	
+
+
 

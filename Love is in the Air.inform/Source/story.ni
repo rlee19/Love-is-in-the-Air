@@ -122,41 +122,68 @@ Underground tunnel is down of closet.  "It is pitch dark, and you can't see a th
 Instead of listening to Underground tunnel:
 	say "WOOF WOOF! That sounds a lot like Victoria's dog, Chewy!"
 	
-tunnel1 is a dark room.  tunnel1 is north of underground tunnel. 
-[The printed name of "tunnel1" is Underground tunnel.]
-
-Instead of listening to tunnel1:
-	say "WOOF! Sounds like it's getting farther!"
-	
 tunnel2 is a dark room.  tunnel2 is south of underground tunnel.
 
 Instead of listening to tunnel2:
 	say "WOOF! Sounds like it's getting closer!"
+	
+Instead of going north in tunnel2:
+	say "That's where you just came from"
 	
 tunnel3 is east of tunnel2.  tunnel3 is a dark room.
 
 Instead of listening to tunnel3:
 	say "I can hear his breathing!  I'm getting closer!"
 	
+Instead of going west in tunnel3:
+	say "That's where you just came from"
+	
 tunnel4 is north of tunnel3.  tunnel4 is a dark room.
 
 Instead of listening to tunnel4:
 	say "WOOF! It's even louder!"
+	
+Instead of going south in tunnel4:
+	say "That's where you just came from"
 
 tunnel5 is east of tunnel4.  tunnel5 is a dark room.
 
 Instead of listening to tunnel5:
 	say "I can hear the bell on Chewy's collar! This is definitely the right direction"
 	
+Instead of going west in tunnel5:
+	say "That's where you just came from"
+	
 tunnel6 is east of tunnel5.  tunnel6 is a dark room.
 
 Instead of listening to tunnel6:
 	say "I see a light just to the north, and there's Chewy wagging her tail!"
 	
+Instead of going west in tunnel6:
+	say "That's where you just came from"
+	
 Instead of going west in east side of underground tunnel:
 	say "You should go up and follow Chewy"
 	
 East side of underground tunnel is north of tunnel6.  The description is "As you approach Chewy, she runs up the stairs."
+
+tunnel7 is north of tunnel4.  tunnel7 is a dark room.
+Instead of listening to tunnel7:
+	say "I don't think I'm heading in the right direction"
+	
+tunnel8 is north of tunnel5 and east of tunnel7.  tunnel8 is a dark room.
+Instead of listening to tunnel8:
+	say "Chewy's barks are getting softer, I'm probably heading the wrong way"
+	
+tunnel9 is south of tunnel5 and east of tunnel3.  tunnel9 is a dark room.
+Instead of listening to tunnel9:
+	say "I should go back, I can barely hear his barks"
+	
+tunnel10 is north of underground tunnel.  tunnel10 is dark room.  
+Instead of listening to tunnel10:
+	say "I can't hear the barks at all, I should probably go back"
+
+
 
 [End of fourth puzzle]
 
@@ -164,13 +191,25 @@ Back room of a church is up of East side of underground tunnel.  The description
 
 old wooden table is scenery in Back room of a church.  The description is "You see a couple lit candles on the table, nothing much."
 
+candles is scenery in back room of a church.  The description is "They're hot, probably shouldn't touch them"
+
 Changing room is a room.  Changing room is east of wooden door.
 
 Wooden door is a door.  Wooden door is closed and openable.  Wooden door is east of back room of a church and west of changing room.
 
 After opening Wooden door:
-	say "As you open the door, there she is.  The love of your life standing right before you, in her gorgeous wedding gown.  All you need to do, is kiss her."
+	say "As you open the door, there she is.  The love of your life standing right before you, in her gorgeous wedding gown.  All you need to do is go in kiss her."
 	
+Victoria is a woman.  Victoria is in Changing room.  The description is "She is the most stunning woman you've ever seen in your life with this gorgous high low, white wedding gown.  Her hair up and tucked into a braid.  Her eyes sparkle as they meet your's"  
 
+Victoria is wearing a wedding gown.	
 
+[Learned this part from the Inform 7 Textbook]
+
+Understand "kiss [someone]" as kissing.
+Instead of kissing something which is not a person:
+say "[The noun] doesn't look very sanitary."
+
+Instead of kissing Victoria:
+	end the story finally saying "You always knew you two were meant to be."
 

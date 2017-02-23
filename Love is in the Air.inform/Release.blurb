@@ -1,18 +1,18 @@
 ! Blurb file created by Inform build 6M62
 
-status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/rlee19/Desktop/Comp Sci/Love-is-in-the-Air/Love is in the Air.inform/Build/StatusCblorb.html"
+status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/rlee19/Desktop/School/Comp Sci/Love-is-in-the-Air/Love is in the Air.inform/Build/StatusCblorb.html"
 
 
 ! Identification
 
-project folder "/Users/rlee19/Desktop/Comp Sci/Love-is-in-the-Air/Love is in the Air.inform"
-release to "/Users/rlee19/Desktop/Comp Sci/Love-is-in-the-Air/Love is in the Air.materials/Release"
+project folder "/Users/rlee19/Desktop/School/Comp Sci/Love-is-in-the-Air/Love is in the Air.inform"
+release to "/Users/rlee19/Desktop/School/Comp Sci/Love-is-in-the-Air/Love is in the Air.materials/Release"
 
 ! Blorb instructions
 
 storyfile leafname "Love is in the Air.gblorb"
-storyfile "/Users/rlee19/Desktop/Comp Sci/Love-is-in-the-Air/Love is in the Air.inform/Build/output.ulx" include
-ifiction "/Users/rlee19/Desktop/Comp Sci/Love-is-in-the-Air/Love is in the Air.inform/Metadata.iFiction" include
+storyfile "/Users/rlee19/Desktop/School/Comp Sci/Love-is-in-the-Air/Love is in the Air.inform/Build/output.ulx" include
+ifiction "/Users/rlee19/Desktop/School/Comp Sci/Love-is-in-the-Air/Love is in the Air.inform/Metadata.iFiction" include
 cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 

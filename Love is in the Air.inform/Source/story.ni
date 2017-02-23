@@ -8,6 +8,7 @@ When play begins: say "Singing songs about her, dreaming of her, thinking about 
 Rule for deciding whether all includes something: it does not.
 	
 [Bathroom - First Puzzle]
+[Shortest way to win this puzzle is to flush the toilet, grab the key, and unlock the door]
 
 Bathroom is a room. "Squeaky clean, just how I like it.  The west hallway is just out the door to the north."
 
@@ -38,7 +39,10 @@ Living Room is east of Hallway. The description is "A typical living room and a 
 
 The Front Door is a door.  The Front Door is south of Lawn and north of Living Room.  The description is "The lawn is just beyond this door."
 
+Clock is a thing in Living Room.  The description is "The hour hand broke a while back.  But at least theres a little box that tells me the date: August 25"
+
 [Second Puzzle]
+[Examine paper in the mailbox, go to the bedroom and examine your window, and you will see that the sketch in the paper is the same view as out your window]
 Lawn is north of The Front Door. The description is "The sweet smell of roses drifts through the air.  The living room is just to the south through the front door."
 
 Mailbox is a thing in Lawn.  Mailbox is fixed in place.  The description is "My favourite part of the day, checking my mailbox to see if Victoria sent me another little sketch."
@@ -83,6 +87,7 @@ Instead of examining the small window:
 [End of second Puzzle.  The player should realize that the sketch matches the view from his bedroom window so that building is where they should go]
 	
 [Third Puzzle]
+[Examine bookshelf, examine maze runner book, take key, unlock hidden door behind tuxedo]
 bed is an enterable supporter in Bedroom.  bed is undescribed.
 
 Instead of entering bed:
@@ -114,6 +119,7 @@ After opening hidden door:
 [End of Third Puzzle]
 
 [Fourth Puzzle]
+[Fastest way out of the maze: south, east, north, east, east, north]
 
 Chewy is a male animal.  Chewy is in Underground tunnel.  Chewy is undescribed.  The description is "Just by the texture of the fur, and the bark, it's definitely Victoria's dog, Chewy"
 
@@ -182,8 +188,6 @@ Instead of listening to tunnel9:
 tunnel10 is north of underground tunnel.  tunnel10 is dark room.  
 Instead of listening to tunnel10:
 	say "I can't hear the barks at all, I should probably go back"
-
-
 
 [End of fourth puzzle]
 

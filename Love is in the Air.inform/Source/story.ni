@@ -3,7 +3,7 @@
 When play begins:
 	now left hand status line is "[location]".
 	
-When play begins: say "Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  I haven't checked my mailbox yet."
+When play begins: say "Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, you've promised yourself that you will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, you always find myself deciphering what her riddles and sketches mean.  Who knows, maybe you've recieved another one today!  You haven't checked your mailbox out in the lawn yet."
 
 Rule for deciding whether all includes something: it does not.
 	
@@ -12,15 +12,15 @@ Rule for deciding whether all includes something: it does not.
 
 Bathroom is a room. "Squeaky clean, just how I like it.  The west hallway is just out the door to the north."
 
-sink is a thing in Bathroom.  sink is fixed in place.  The description is "Sleek 63 inch white marble sink.  Nothing special about it."
+sink is a thing in Bathroom.  sink is fixed in place.  The description is "Sleek 63 inch white marble sink.  Nothing special."
 
 bathtub is an enterable supporter in Bathroom.  The description is "Who doesn't love a bubble bath :D " 
 
 Instead of entering bathtub, say "I should probably be trying to find a way out of the bathroom rather than chilling in there"
 
-toilet is a thing in Bathroom.  Toilet is fixed in place. The description is "I should really fix this toilet, it's been clogged for a while." 
+toilet is a thing in Bathroom.  Toilet is fixed in place. The description is "It's been clogged for a while.  I haven't flushed it ever since" 
 
-Flushing toilet is an action applying to nothing.
+Flushing toilet is an action applying to one thing.
 Understand "flush" or "flush toilet" as flushing toilet.
 After flushing toilet: say "CLUNK! Lots of old toilet paper start to bubble up to the surface, and right under them is a golden key."
 
@@ -28,21 +28,30 @@ bathroom door is a door.  Bathroom door is north of Bathroom and south of Hallwa
 
 Description of the bathroom door is "Are you kidding me....I've locked myself in..in my own bathroom. I know I left the key in here somewhere, I just need to find it."
 
-The gold key is a thing.  The gold key unlocks the bathroom door.  It is in Bathroom.  It is undescribed.
+The gold key is a thing.  The gold key unlocks the bathroom door.  It is in Bathroom.  It is undescribed.  The description is "This is the key that unlocks the bathroom door!"
+
+Instead of unlocking bathroom door with gold key:
+	say "Now I can finally go check my mailbox out on my lawn";
+	now bathroom door is unlocked;
+	now bathroom door is open.
+
 [End of first puzzle]
 
 Bedroom is west of Hallway. The description is  "I don't really have much in my room.  I just have my bed, a study desk, and my bookshelf.  There's a wide window above the doors to my closet on the south wall.  The west hallway is just to the east."
+	
+Study desk is scenery in Bedroom.  The description is "I haven't cleaned my study desk in a bit.  This is where I examine all of Victoria's letters, read books, do my homework"
 
-Hallway is north of Bathroom door. The description is "There's a small window on the north wall.  The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east."
+Hallway is north of Bathroom door. The description is "There's a small window on the north wall.  The living room is to the east, the bathroom is to the south, and the bedroom is to the west."
 
 Living Room is east of Hallway. The description is "A typical living room and a square window on the east wall.  The lawn is to the north through the front door, and the east hallway is just to the west."
-
+	
 The Front Door is a door.  The Front Door is south of Lawn and north of Living Room.  The description is "The lawn is just beyond this door."
 
 Clock is a thing in Living Room.  The description is "The hour hand broke a while back.  But at least theres a little box that tells me the date: August 25"
 
 [Second Puzzle]
 [Examine paper in the mailbox, go to the bedroom and examine your window, and you will see that the sketch in the paper is the same view as out your window]
+
 Lawn is north of The Front Door. The description is "The sweet smell of roses drifts through the air.  The living room is just to the south through the front door."
 
 Mailbox is a thing in Lawn.  Mailbox is fixed in place.  The description is "My favourite part of the day, checking my mailbox to see if Victoria sent me another little sketch."
@@ -60,7 +69,7 @@ After examining folded piece of paper:
 Unfolding paper is an action applying to nothing.
 Understand "open paper" or "unfold" or "unfold paper" as unfolding paper.
 After unfolding paper:
-	say "I see a sketch of a wedding arch, two rings, and a heart between two people.  Is she getting married? There's also a date and time scribbled on the corner.  August 25 2:00PM.  And theres another little sketch of what looks like a view from a window, there are trees, and part of a white building with a bell at the top with arrows pointing at it."
+	say "I see a sketch of a wedding arch, two rings, and a heart between two people.  Is she getting married? NO WAY.  There's also a date and time scribbled on the corner.  August 25 2:00PM.  What is the date today?  And there's another little sketch of what looks like a view from a window, there are trees, and part of a white building with a bell at the top with arrows pointing at it."
 
 
 Roses is a thing in Lawn.  The description is "Victoria has always liked roses."

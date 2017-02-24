@@ -7,7 +7,7 @@
         <result xml:space="preserve">
 
 
-Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, but I've promised myself I will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, I always find myself deciphering what her riddles and sketches mean.  Who knows, maybe I've recieved another one today!  I haven't checked my mailbox yet.
+Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, you've promised yourself that you will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, you always find myself deciphering what her riddles and sketches mean.  Who knows, maybe you've recieved another one today!  You haven't checked your mailbox out in the lawn yet.
 
 Love is in the Air
 An Interactive Fiction by Rachel Lee
@@ -684,6 +684,7 @@ You can see bathroom door here.
         <children><child nodeId="node-1215"></child>
             <child nodeId="node-1207"></child>
             <child nodeId="node-1206"></child>
+            <child nodeId="node-1400"></child>
             <child nodeId="node-1031"></child>
         </children>
     </item>
@@ -2473,6 +2474,28 @@ Oh theres a folded piece of paper here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-1400">
+        <command xml:space="preserve">unlock bathroom door</command>
+        <result xml:space="preserve">(with the gold key)
+You unlock bathroom door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1401"></child>
+        </children>
+    </item>
+    <item nodeId="node-1401">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening bathroom door)
+Now I can finally go check my mailbox out on my lawn
+Hallway
+There's a small window on the north wall.  The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.
+
+You can see bathroom door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1206">
         <command xml:space="preserve">unlock bathroom</command>
         <result xml:space="preserve">(with the gold key)
@@ -2658,8 +2681,7 @@ You can see Bed here.
     <item nodeId="node-1224">
         <command xml:space="preserve">unlock door</command>
         <result xml:space="preserve">(with the gold key)
-You unlock bathroom door.
-
+Now I can finally go check my mailbox out on my lawn
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1225"></child>
@@ -2667,10 +2689,9 @@ You unlock bathroom door.
     </item>
     <item nodeId="node-1225">
         <command xml:space="preserve">n</command>
-        <result xml:space="preserve">(first opening bathroom door)
-
-West Hallway
-The bathroom is to the south, the bedroom is to the west, and the east hallway is just to the east.
+        <result xml:space="preserve">
+Hallway
+There's a small window on the north wall.  The living room is to the east, the bathroom is to the south, and the bedroom is to the west.
 
 You can see bathroom door here.
 
@@ -2678,7 +2699,27 @@ You can see bathroom door here.
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1229"></child>
             <child nodeId="node-1226"></child>
+            <child nodeId="node-1410"></child>
         </children>
+    </item>
+    <item nodeId="node-1410">
+        <command xml:space="preserve">x window</command>
+        <result xml:space="preserve">I see a cat, the road, and a patch of grass
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1421"></child>
+        </children>
+    </item>
+    <item nodeId="node-1421">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Living Room
+A typical living room and a square window on the east wall.  The lawn is to the north through the front door, and the east hallway is just to the west.
+
+You can see a Front Door and Clock here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1226">
         <command xml:space="preserve">w</command>

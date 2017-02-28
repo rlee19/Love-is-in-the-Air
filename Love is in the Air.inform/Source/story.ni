@@ -1,6 +1,7 @@
 "Love is in the Air" by Rachel Lee
 
 [Borrowed this part from Mr.Kiang's get that cat game]
+[Puts exit list at the top of the screen]
 When play begins:
 	 now right hand status line is "Exits: [exit list]";
 	now left hand status line is "[location]".
@@ -10,6 +11,8 @@ To say exit list:
 	repeat with way running through directions: 
 		let place be the room way from the location; 
 		if place is a room, say " [way]".
+		
+The description of the player is "Typical bedhead, I have on a shabby Star wars tshirt and black cargo pants.  #OOTD"
 	
 When play begins: say "Singing songs about her, dreaming of her, thinking about how you've finally found the one.  But you're just so nervous about telling her, you've promised yourself that you will tell her one day.  Victoria, her sweet smile and that one of a kind laugh.  You guys send mail to each other all the time.  But with her being a terrible writer, you always find yourself deciphering what her riddles and sketches mean.  Who knows, maybe you've recieved another one today!  You haven't checked your mailbox out in the lawn yet."
 
@@ -28,7 +31,7 @@ Instead of entering bathtub, say "I should probably be trying to find a way out 
 toilet is a thing in Bathroom.  Toilet is fixed in place. The description is "It's been clogged for a while.  I haven't flushed it ever since" 
 
 Flushing toilet is an action applying to nothing.
-Understand "flush" or "flush toilet" as flushing toilet.
+Understand "flush" or "unclog toilet" or "unclog" or "flush toilet" as flushing toilet.
 After flushing toilet: say "CLUNK! Lots of old toilet paper start to bubble up to the surface, and right under them is a gold key."
 
 bathroom door is a door.  Bathroom door is north of Bathroom and south of Hallway.  Bathroom door is locked and lockable.  Bathroom door is closed and openable.
@@ -48,6 +51,8 @@ Bedroom is west of Hallway. The description is  "I don't really have much in my 
 	
 Study desk is scenery in Bedroom.  The description is "I haven't cleaned my study desk in a bit.  This is where I examine all of Victoria's letters, read books, do my homework"
 
+Victoria's letters is scenery in Bedroom.  The description is "She only sends me cute little sketches of what goes on in her day, some times some objects with it too like a book or something."
+
 Hallway is north of Bathroom door. The description is "There's a small window on the north wall.  The living room is to the east, the bathroom is to the south, and the bedroom is to the west."
 
 Living Room is east of Hallway. The description is "A typical living room and a square window on the east wall.  The lawn is to the north through the front door, and the hallway is just to the west."
@@ -61,6 +66,9 @@ Clock is a thing in Living Room.  The description is "The hour hand broke a whil
 Lawn is north of The Front Door. The description is "The sweet smell of roses drifts through the air.  The living room is just to the south through the front door."
 
 Mailbox is a thing in Lawn.  Mailbox is fixed in place.  The description is "My favourite part of the day, checking my mailbox to see if Victoria sent me another little sketch."
+
+Instead of opening mailbox:
+	now Folded piece of paper is described.
 
 Folded piece of paper is a thing in Lawn.  Folded piece of paper is undescribed.
 Understand "Folded piece of paper" as paper.  
@@ -117,6 +125,7 @@ Instead of opening The Maze Runner Book:
 Silver key is a thing inside Bedroom.  Silver key is undescribed.  The description is "Looks like an antique key with some nice engravings on it.  Wonder what it's for."
 
 Silver key unlocks Hidden door.
+
 
 Closet is south of Bedroom.  The description is "I have stacks of clothes in here, nothing really I want to get into.  My bedroom is to the north."  
 
@@ -215,7 +224,7 @@ Changing room is a room.  Changing room is east of wooden door.
 Wooden door is a door.  Wooden door is closed and openable.  Wooden door is east of back room of a church and west of changing room.
 
 After opening Wooden door:
-	say "As you open the door, there she is.  The love of your life standing right before you, in her gorgeous wedding gown.  All you need to do is go in the roon and kiss her."
+	say "As you open the door, there she is.  The love of your life standing right before you, in her gorgeous wedding gown.  All you need to do is go in the room and kiss her."
 	
 Victoria is a woman.  Victoria is in Changing room.  The description is "She is the most stunning woman you've ever seen in your life with this gorgous high low, white wedding gown.  Her hair up and tucked into a braid.  Her eyes sparkle as they meet your's"  
 
@@ -230,9 +239,26 @@ say "[The noun] doesn't look very sanitary."
 Instead of kissing Victoria:
 	end the story finally saying "You always knew you two were meant to be."
 	
-[Shortest way to win the first puzzle is to flush the toilet, grab the key, and unlock the door]
-[Go to the lawn, examine paper in the mailbox, go to the bedroom and examine your window, and you will see that the sketch in the paper is the same view as out your window]
-[Examine bookshelf, examine maze runner book, take key, unlock hidden door behind tuxedo]
-[Fastest way out of the maze: south, east, north, east, east, north]
-[Go into changing room and kiss Victoria]
-
+[Shortest way to win the game:
+	take key
+	unlock door
+	open door
+	n
+	w
+	x maze runner book
+	open maze runner book
+	take key
+	s
+	wear tuxedo
+	unlock hidden door
+	d
+	s
+	e
+	n
+	e
+	e
+	n
+	up
+	open door
+	w
+	kiss victoria]
